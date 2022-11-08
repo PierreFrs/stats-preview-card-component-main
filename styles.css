@@ -28,12 +28,45 @@ main {
     border-radius: 8px;
     background-color: hsl(244, 38%, 16%);
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.image {
+    width: 100%;
+    min-height: 240px;
+    overflow: hidden;
+    background-image: url(./images/image-header-mobile.jpg);
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    background-color: hsl(277, 64%, 61%);
+    background-blend-mode: overlay;
+}
 
-.desktop-image {
-        display:none;
-    }
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 40px 31.5px;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.insights {
+    color: hsl(277, 64%, 61%);
+}
+
+.declaration {
+    margin: 16px auto;
+    line-height: 1.6;
+    color: hsla(0, 0%, 100%, 0.557);
+}
+
 
 
 
@@ -48,10 +81,7 @@ footer {
 
 @media only screen and (min-width: 376px) {
 
-    .mobile-image {
-            display:none;
-        }
-    .desktop-image {
-        display:block;
+    .image {
+        background-image: url(./images/image-header-desktop.jpg);    
     }
 }
