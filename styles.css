@@ -7,5 +7,51 @@
 html {
     font-size: 15px;
     font-family: 'Inter', sans-serif;
+    height: 100vh;
+    display: grid;
 }
 
+body {
+    height: 100vh;
+    display: grid;
+    position: relative;
+    background-color: hsl(233, 47%, 7%);
+}
+
+/*card styles*/
+
+main {
+    margin: auto;
+    min-width: 327px;
+    max-width: 87.2%;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: hsl(244, 38%, 16%);
+    color: white;
+}
+
+
+.desktop-image {
+        display:none;
+    }
+
+
+
+/*footer styles*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+/*media*/
+
+@media only screen and (min-width: 376px) {
+
+    .mobile-image {
+            display:none;
+        }
+    .desktop-image {
+        display:block;
+    }
+}
