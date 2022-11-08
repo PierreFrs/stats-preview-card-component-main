@@ -7,14 +7,15 @@
 html {
     font-size: 15px;
     font-family: 'Inter', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     position: relative;
+    padding-bottom: 6rem;
     background-color: hsl(233, 47%, 7%);
 }
 
@@ -50,7 +51,7 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 40px 31.5px;
+    margin: 40px 31.5px 0;
 }
 
 .title {
@@ -62,12 +63,33 @@ main {
 }
 
 .declaration {
-    margin: 16px auto;
+    margin: 16px auto 0;
     line-height: 1.6;
     color: hsla(0, 0%, 100%, 0.557);
 }
 
 
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: 40px 32px 32px;
+}
+
+.numbers {
+    color: hsla(0, 0%, 100%, 0.8);
+    font-size: 2rem;
+}
+
+.stat-container p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.557);
+    letter-spacing: .1rem;
+    line-height: 2;
+}
 
 
 /*footer styles*/
@@ -75,13 +97,49 @@ main {
 footer {
     position: absolute;
     bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 /*media*/
 
 @media only screen and (min-width: 376px) {
 
+    main {
+        max-width: 1110px;
+        flex-direction: row-reverse;
+        align-items: stretch
+    }
+    
     .image {
         background-image: url(./images/image-header-desktop.jpg);    
     }
+
+    .text {
+        width: 51.35%;
+        text-align: left;
+    }
+
+    .title {
+        margin : 3.5% 3.5% 0 3.5%;
+    }
+
+    .declaration {
+        margin: 6.5% 3.5% 3.5% 3.5%;
+    }
+
+    .stats {
+        flex-direction: row;
+        margin-bottom: 60px;
+        gap: 60px
+    }
+
+    .numbers {
+        font-size: 1.5rem;
+    }
+
+    .stat-container p {
+        line-height: 3;
+    }
+
 }
